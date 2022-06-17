@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+       body{
+            font-family:"Open Sans", sans-serif ;
+        }
+    .logo>img{
+       width: 200px;
+      
+      }
+      .logo{
+          text-align: center;
+        
+      }
+      .top{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          background-color:rgb(7,77,162);
+      }
+      .pay{
+          width: 90%;
+          display: flex;
+          justify-content: flex-start;
+          margin: 0 auto;
+      }
+      .pay_left{
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+    }
+    .pay_body{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .pay_right{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+    .pay_order{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pay_total{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pay_amount{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pay_pay{
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    .pay_pay>button{
+        width: 400px;
+        height: 40px;
+        font-size: x-large;
+        font-weight: bolder;
+        color: white;
+        background-color: #FFC439;
+        border: none;
+        margin-top: 20px;
+        
+    }
+    .payment-footer{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .payment-footer-payment-gateway{
+        display: flex;
+        justify-content: center;
+    }
+    .pay_dis{
+        display: flex;
+        justify-content: center;
+    }
+    .pay_left>div>img{
+        padding: 10px;
+    }
+    .pay_left>div>p{
+        margin-left: 30px;
+        color: grey;
+    }
+    .pay_order>div{
+        font-weight: bolder;
+    }
+    .pay_total>div{
+        font-weight: bolder;
+    }
+    .pay_total>div:nth-child(2){
+        color: #FFC439;
+        font-size: x-large;
+    }
+    .pay_amount>div{
+        font-weight: bolder;
+    }
+    .pay_amount>div:nth-child(2){
+        color: #FFC439;
+        font-size: x-large;
+    }
+    .pay_right{
+        margin-left: 20px;
+    }
+    .pay_right-body{
+        border: 1px solid grey;
+    }
+    .pay_left{
+        border: 1px solid grey; 
+    }
+    .pay_order{
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    .pay_total{
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .pay_amount{
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .pay_dis{
+        color: grey;
+    }
+    
+    </style>
+</head>
+<body>
+  <div class="top">
+   <div class="logo"><img onclick="window.location.href='../index.html'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfDfjf2o3uKXbhMlt8yKXh8shusZGWFAPMw&usqp=CAU" alt=""></div>
+  </div> 
+  <div class="pay">
+    <div class="Payment-Heading">
+        <h3>Payment Method</h3>
+    </div>
+</div>
+<div class="pay_body">
+    <div class="pay_left">
+        <div> <span><input type="radio"></span> <img src="https://content1.geekbuying.com/V1.4/en/images/cartImg/paypal.jpg?v=20220111" alt=""><br><p>The safer,easier way to pay</p></div>
+        <div> <span><input type="radio"></span><img src="https://content1.geekbuying.com/V1.4/en/images/cartImg/visa-min.jpg?v=20220111" alt=""><br><p>Pay by credit/debit card directly.</p></div>
+       
+    </div>
+<div class="pay_right">
+    <div class="pay_right-body">
+        <div class="pay_order">
+            <div>Order No:AW78923</div>
+        </div>
+        <div class="pay_total">
+            <div>Grand Total:</div>
+            <div id="total"></div>
+        </div>
+        <hr>
+        <div class="pay_amount">
+            <div>Payable Amount:</div>
+            <div id="total2"></div>
+        </div>
+        <div class="pay_pay"><button onclick="window.location.href='../html/otp.html'">Pay</button></div>
+    </div>
+</div>
+</div>
+<div class="payment-footer">
+    <div class="payment-footer-payment-gateway">
+        <div><img src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.jpg" alt=""></div>
+    </div>
+    <hr>
+    <div class="pay_dis">
+        <div>© 2012-2022 Geekbuying.com. All rights reserved.</div>
+    </div>
+</div>
+</body>
+     <script>
+          var  cartarr = JSON.parse(localStorage.getItem("cartitems"));
+             var X = cartarr.reduce(function(acc, cv){
+                  return acc + +cv.price;
+             },0);
+             var AfterDiscount = (X*70)/100;
+             var total = document.querySelector("#total");
+                total.textContent=`${Math.floor(AfterDiscount)}`;
+                var total = document.querySelector("#total2");
+                total.textContent=`${Math.floor(AfterDiscount)}`;
+     </script>
+</html>

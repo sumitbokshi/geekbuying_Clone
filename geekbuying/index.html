@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<nav>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --primaryFont : 'DM Sans', sans-serif;
+    --charSpace : 6px; 
+    --primaryColor : #3e4152;
+    --secondaryColor : #fafbfc;
+}
+a:link{
+    text-decoration: none;
+}
+body{
+    font-family: var(--primaryFont);
+    scroll-behavior: smooth;
+}
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+        #navbar{
+            width: 100%;
+            height: 130px;
+            background-color:#074DA2;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+        #nav1{
+            height: 30px;
+            display: flex;
+           margin-left: 695px;
+        }
+        #nav1 > div{
+            margin: 5px 20px 0px 0px;
+        }
+        #nav2{
+            border-top: 1px solid rgb(242,242,242);
+            height: 100px;
+        }
+        #nav2one{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            color: aliceblue;
+        }
+        #nav2onethree{
+            display: flex;
+            justify-content: space-evenly;
+            color: aliceblue
+            
+        }
+        #nav2oneone{
+            width: 29%;
+            text-align: right;
+            margin-top: -20px;
+            padding-right: 20px;
+            color: royalblue;
+        }
+        #nav2onetwo{
+            display: flex;
+            width: 40%;
+            margin: 8px 0px;
+            color: aliceblue
+        }
+        #nav2onethree{
+            padding: 10px;
+            width: 20%;
+            justify-content: space-around;
+            margin-top: 10px;
+            margin-right: 120px;
+            margin-left: 100px;
+        }
+        #nav2two{
+        display: flex;
+         width: 100%;
+         font-weight: bolder;
+         justify-content: space-evenly;
+         margin:20px -80px;
+         padding-left: -120px;
+         color: aliceblue
+         
+        }
+        #nav2twoone{
+            width: 22%;
+            text-align: right;
+        }
+       
+        #nav2oneone>img{
+         width: 180px;
+         margin: 20px;
+         height: 70px;
+         
+        }
+        
+            
+        #sec{
+            border: 0px;
+            width: 130px;
+            height: 30px;
+            padding-left: 5px;
+        }
+       
+        #boxon{
+            width: 80%;
+            height: 320px;
+            margin-left: 120px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "a a b d"
+            "a a c e";
+           
+        }
+        #box_one{
+            grid-area: a;
+            margin: 10px;
+            background-color: white;
+        }
+        #imageone{
+            width: 100%;
+            height: 320px;
+        }
+        #box_two{
+            grid-area: b;
+            margin: 10px;
+        } 
+        #imagetwo{
+            width: 100%;
+            height: 150px;
+        }
+        #box_three{
+            grid-area: c;
+            margin: 10px;
+        } #imagethree{
+            width: 100%;
+            height: 150px;
+            margin-top: -5px;
+        }
+        #box_four{
+            grid-area: d;
+            margin: 10px;
+        } 
+        #imagefour{
+            width: 100%;
+            height: 150px;
+        }
+        #box_five{
+            grid-area: e;
+            margin: 10px;
+        } 
+        #imagefive{
+            width: 100%;
+            height: 150px;
+        }
+        
+      #boxtwo{
+            width: 78%;
+            height: 280px;
+            margin: 20px 140px;
+            display: flex;     
+           
+      }
+      #box_2one{
+          width: 24%;
+          margin-right: 15px;
+          height: 100%;
+          
+      }
+      #box_2one > img{
+        width: 100%;
+        height: 80%;
+      }
+      #box_2two{
+          width: 24%;
+          margin-right: 15px;
+          height: 100%;
+         
+      }
+      #box_2two > img{
+
+        width: 100%;
+        height: 80%;
+      }
+      #box_2three{
+          width: 24%;
+          margin-right: 15px;
+          height: 100%;
+         
+      }
+      #box_2three > img{
+        width: 100%;
+        height: 80%;
+      } #box_2four{
+          width: 24%;
+          height: 100%;
+         
+         
+      }
+      #box_2four > img{
+        width: 100%;
+        height: 80%;
+      }
+      #boxthree{
+            width: 78%;
+            height: 280px;
+            margin: 20px 0px 20px 150px;
+            display: flex;  
+            
+           }
+          #boxthree > div{
+              width: 23%;
+              height: 93%;
+              margin: 10px;
+              
+          }
+          #boxthree > div > img{
+              width: 100%;
+              height: 60%;
+          }
+          #boxthree > div > h3,h5,h4{
+              margin-top: -5px;
+              margin-left: 20px;
+            
+          }
+          #boxthree > div > h4{
+             font-weight: lighter;
+
+          }
+          #box4{
+            width: 78%;
+            height: 320px;
+            margin-left: 150px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "a a b d"
+            "a a c e";
+           
+        }
+        #box_1{
+            grid-area: a;
+            margin: 10px;
+            background-color: white;
+        }
+        #image1{
+            width: 100%;
+            height: 320px;
+        }
+        #box_2{
+            grid-area: b;
+            margin: 10px;
+        } 
+        #image2{
+            width: 100%;
+            height: 150px;
+        }
+        #box_3{
+            grid-area: c;
+            margin: 10px;
+        } #image3{
+            width: 100%;
+            height: 150px;
+            margin-top: -5px;
+        }
+        #box_4{
+            grid-area: d;
+            margin: 10px;
+        } 
+        #image4{
+            width: 100%;
+            height: 150px;
+        }
+        #box_5{
+            grid-area: e;
+            margin: 10px;
+        } 
+        #image5{
+            width: 100%;
+            height: 150px;
+        }
+         
+          
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav1"> 
+        <div style="color:white">Save big with app!</div>
+        <div style="color:white">Ship to/INR</div>
+        <div style="color:white">Support Center</div>
+
+        </div>
+        <div id="nav2">
+            <div id="nav2one">   <div id="nav2oneone"><img onclick="window.location.href='index.html'" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfDfjf2o3uKXbhMlt8yKXh8shusZGWFAPMw&usqp=CAU"
+                alt=""></div>
+            <div id="nav2onetwo"> 
+                <select id="sec" >
+                    <option value="">All Categories </option>
+                    <option value="">Smart Home & Garden</option>
+                    <option value="">Phones & Accessories</option>
+                    <option value="">Computers, Tablets & Accessories</option>
+                    <option value="">Wearable Devices</option>
+                    <option value="">Automobiles & Motorcycles</option>
+                    <option value="">sports & Outdoors</option>
+                    <option value="">Consumer Electronics</option>
+                    <option value="">TV Boxes & Mini PCs</option>
+                    <option value="">Toys & Hobbies</option>
+                    <option value="">Security System</option>
+                    <option value="">Fashion</option>
+                </select>
+                <div class="line"></div>
+                <input style="height: 31px;width: 280px;" placeholder="Search by keywords" >
+                <div style="width: 45px;height: 16px;padding: 8px;"><i class="fas fa-search"></i></div>
+            </div>
+            <div id="nav2onethree">
+                <div id="sing_in"><i class="far fa-user" ></i>Sign in</div>
+                <div id="wishlist"><i class="far fa-heart" ></i></div>
+                <div id="cart"><i class="fas fa-cart-plus" ></i></div> </div>
+            </div>
+            <div id="nav2two"> 
+                <div id="nav2twoone"> 
+                    <div ><a href="../html/product1.html" style="color:white">Categories</a></div></div>
+                    <div ><a href="../html/product2.html'" style="color:white">New</a></div>
+                    <div><a href="#" style="color: white">Bestselling</a></div>
+                    <div><a href="#" style="color: white">Brand</a></div> 
+                    <div><a href="#" style="color: white">Clearence</a></div>
+                    <div><a href="#" style="color: white">Coupon</a></div>
+                    <div><a href="#" style="color: white">App Only</a></div>
+            
+        </div>
+    </div>
+      <!-- ***************end of navbar*********************** -->
+
+
+    <div id="boxon"> 
+    <div id="box_one">
+        <img id="imageone" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2206/740x670-62a832772b40c920d48b90e3.jpg">
+    </div>
+    <div id="box_two">
+        <img id="imagetwo" onclick="window.location.href='../html/product2.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2103-62902ce92b40c91cb09e7adb.jpg">
+    </div>
+    <div id="box_three">
+     <img id="imagethree" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2102-62902a182b40c91cb09e7ad9.jpg">
+    </div> <div id="box_four">
+         <img id="imagefour" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2102-62902a182b40c91cb09e7ad9.jpg">
+    </div>
+    <div id="box_five">
+     <img id="imagefive" onclick="window.location.href='../html/product2.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2104-62902c152b40c91cb09e7ada.jpg">
+    </div>   
+    </div>
+    <h3 style="margin:20px 150px">Trending Categories</h3>
+    <div id="boxtwo">
+    <div id="box_2one">
+   <h4 style="text-align: center; margin-top: 2px;">Smart Home</h4>
+   <img onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2205/488x2743-628f62882b40c91f8cd36998.jpg">
+        </div>
+        <div id="box_2two">
+            <h4 style="text-align: center; margin-top: 2px;">E-TRansport</h4>
+            <img onclick="window.location.href='../html/product2.html'" src="https://img.gkbcdn.com/s3/bn/2205/488x274-628f63522b40c91f8cd3699a.jpg">
+        </div>
+        <div id="box_2three">
+            <h4 style="text-align: center; margin-top: 2px;">3D Printers</h4>
+            <img onclick="window.location.href='../html/product2.html'" src="https://img.gkbcdn.com/s3/bn/2205/3d488x274-62958bbe2b40c9241c538d77.jpg">
+        </div>
+        <div id="box_2four">
+            <h4 style="text-align: center; margin-top: 2px;">Vaccum Cleaners</h4>
+            <img onclick="window.location.href='../html/product2.html'" src="https://img.gkbcdn.com/s3/bb/jimmy-20200910094916929.jpg">
+        </div>
+    </div>
+
+    <div id="boxthree"></div>
+    <div id="boxon"> 
+        <div id="box_one">
+            <img id="imageone" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bb/roborock-20211111211035580.jpg">
+        </div>
+        <div id="box_two">
+            <img id="imagetwo" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2206/lALPJuZB2ShsBi3M0szS210210-629de75c2b40c92584276d1f.png">
+        </div>
+        <div id="box_three">
+         <img id="imagethree" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2105-62902f152b40c91cb09e7adc.jpg">
+        </div> <div id="box_four">
+             <img id="imagefour" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bn/2205/210x2102-62902a182b40c91cb09e7ad9.jpg">
+        </div>
+        <div id="box_five">
+         <img id="imagefive" onclick="window.location.href='../html/product1.html'" src="https://img.gkbcdn.com/s3/bb/eleglide-20220531151324673.jpg">
+        </div>   
+        </div>
+       
+       <div id="footer"></div>
+</body>
+</html>
+<script>
+    
+   
+
+
+   var  data = [
+        {
+            image_url: "https://img.gkbcdn.com/p/2022-06-01/360-Degree-Rotatable-1080p-HD-Camera-EU-Plug-501469-0._w280_p1_.jpg",
+            price: 18.89,
+            desc: "360 Degree Rotatable 1080p HD Camera, WiFi Wireless Smart Night",
+        },
+        {
+            image_url: "https://img.gkbcdn.com/p/2022-05-30/3-5-Inch-IPS-TYPE-C-Secondary-Screen-CPU-GPU-RAM-HDD-Monitoring-501430-0._w280_p1_.jpg" ,
+            price: 36.99 ,
+            desc: "3.5 Inch IPS TYPE-C Secondary Screen CPU GPU RAM HDD",
+        },
+        {
+            image_url: "https://img.gkbcdn.com/p/2019-08-27/tronsmart-t2-plus-20w--bluetooth-5-0-speaker-tws-1571994588089._w280_p1_.jpg" ,
+            price: 17.99 ,
+            desc: "Mini Wireless Camera Real 1080P Wifi Camera Home Nanny Tiny Cam Baby",
+        },
+        {
+            image_url: "https://img.gkbcdn.com/p/2022-06-08/GREEN-TIME-M7-QI-Bluetooth-Alarm-Clock-Speaker-Black-501618-0._w280_p1_.jpg" ,
+            price: 49.99,
+            desc: "GREEN TIME M7-QI Bluetooth Alarm Clock Speaker, Mobile Phone Wireless",
+        },
+       
+    ];
+    document.querySelector("#sing_in").addEventListener("click" , function(){
+        window.location.href="../html/login.html";
+    })
+    document.querySelector("#wishlist").addEventListener("click" , function(){
+        window.location.href="../html/wishlist.html";
+    })
+    document.querySelector("#cart").addEventListener("click" , function(){
+        window.location.href="../html/cart.html";
+    })
+    
+
+    data.forEach(function(elem){
+    var div = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.setAttribute("src",elem.image_url);
+    
+    var p = document.createElement("h3")
+    p.innerText="$" + elem.price;
+    
+    var dis = document.createElement("h4");
+    dis.innerText = elem.desc
+    div.append(image ,p,dis );
+    document.querySelector("#boxthree").append(div);
+    })
+
+
+
+</script>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --primaryFont : 'DM Sans', sans-serif;
+    --charSpace : 6px; 
+    --primaryColor : #3e4152;
+    --secondaryColor : #fafbfc;
+}
+a:link{
+    text-decoration: none;
+}
+body{
+    font-family: var(--primaryFont);
+    scroll-behavior: smooth;
+}
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+      
+    .logo>img{
+       width: 200px;
+      
+      }
+      .logo{
+          text-align: center;
+      }
+      .top{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          background-color:rgb(7,77,162);
+          
+      }
+      .mid{
+          width: 90%;
+          margin-left: 50px;
+          margin-top: 30px;
+      }
+      .bottom{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 50px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .info{
+          display: flex;
+          
+          justify-content: space-between;
+          background-color: #F1F1F1;
+          color: #999999;
+          
+      }
+      .info>div{
+          width: 50%;
+      }
+      .info_rt{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-family: "Open Sans", sans-serif;
+          
+      }
+      .item{
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: nowrap;
+          padding: 30px;
+      }
+      .cart_img>img{
+          width: 100%;
+          height: 90px;
+      }
+      .cart_name{
+          width: 431px;
+          height: 44px;
+      }
+     .btn{
+	 display: flex;
+	 align-items: center;
+}
+.form-control{
+	max-width: 80px;
+	text-align: center;
+	display: inline-block;
+	margin: 0px 5px;
+}
+.cart_box{
+    display: flex;
+    flex-direction: column;
+}
+.tot{
+    display: flex;
+    justify-content: space-between;
+}
+.checkout>button{
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.checkbox{
+    padding-top: 40px;
+}
+/* item added */
+.itemsadd{
+    background-color: #FFFFFF;
+}
+.info-left{
+    width: 580px;
+    height: 45px;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+}
+.tot-button{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.cart-item-product-total{
+    font-weight: bold;
+}
+#total{
+    font-weight: bold;
+}
+#total>span{
+    color: orangered;
+    font-weight: bold;
+    font-size: x-large;
+}
+#bottom_total{
+    font-weight: bold;
+}
+
+#tot-button>button{
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    color: grey;
+}
+#tot-button>button:hover{
+    color: blue;
+    font-size: large;
+    
+}
+
+#bottom-continue>button:hover{
+   color:blue;
+   font-size: large;
+   
+   
+}
+#bottom_total>span{
+    color: orangered;
+    font-weight: bold;
+    font-size: large;
+}
+#bottom-you-choose{
+    color: grey;
+}
+#bottom-you-choose>span{
+    color: black;
+    font-weight: bold;
+}
+#bottom-continue>button{
+    background-color: transparent;
+    border: 1px;
+    color: grey;
+}
+.itemsadd{
+    border: 1px solid grey;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+.itemsadd>p{
+    padding-left: 20px;
+}
+.tot{
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+  <div class="top">
+   <div class="logo"><img onclick="window.location.href='../index.html'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfDfjf2o3uKXbhMlt8yKXh8shusZGWFAPMw&usqp=CAU" alt=""></div>
+   
+  </div>  
+  <div class="mid">
+  <div><h3>Product Name & Detail</h3></div>
+  <div class="info">
+ <div class="info-left">
+     <div>Product Name & Detail</div>
+ </div>
+ <div class="info_rt">
+     <div>Unit Price</div>
+     <div>Quantity</div>
+     <div>Total</div>
+     <div>Operation</div>
+ </div>
+  </div>
+  <div class="itemsadd">
+    <p>Ship From:China ( <span class="itemcount">Count</span> Items)</p>  
+    <div class="cart_box">
+      
+    </div>
+  </div>
+  </div>  
+  <div class="bottom" >
+   <div onclick="window.location.href='index.html'">Continue Shopping</div>
+   <div id="Nub">SButton</div>
+   <div id="TOTAL" style="color: chocolate;">total</div>
+  
+   <div><img src="https://content1.geekbuying.com/V1.4/en/images/cartImg/new_pp.png" alt=""></div>
+   <div class="checkout"><button onclick="window.location.href='../html/address.html'" >Proceed to Checkout</button></div>
+  </div>  
+</body>
+<script>
+     var cartarr = JSON.parse(localStorage.getItem("cartitems"))||[];
+                 displaycartitem(cartarr);
+         
+         function displaycartitem(cartarr){
+            document.querySelector(".cart_box").textContent="";
+             cartarr.map(function(a,index){
+               var DIV = document.createElement("div");
+               DIV.setAttribute("class","item"); 
+             
+             var checkDiv = document.createElement("div");
+             checkDiv.setAttribute("class","checkbox");
+             var checkIn = document.createElement("input");
+               checkIn.setAttribute("type","checkbox");
+               checkDiv.append(checkIn);
+                
+                var Div2 = document.createElement("div");
+                Div2.setAttribute("class","cart_img");
+                var Img = document.createElement("img");
+                Img.setAttribute("src", a.image_url);
+                Div2.append(Img);
+
+                var Div3=document.createElement("div");
+                Div3.setAttribute("class","cart_name");
+                Div3.textContent= a.name;
+
+                var Div4=document.createElement("div");
+                Div4.setAttribute("class","cart-item-product-price");
+                Div4.textContent= a.price;
+
+                var Div5 =document.createElement("div");
+                var InerDiv=document.createElement("div");
+                 InerDiv.setAttribute("class","btn");
+                  var Button1 = document.createElement("button");
+                  Button1.setAttribute("class","cart-qty-plus");
+                  Button1.setAttribute("value","+");
+                  Button1.setAttribute("type","button");
+                  Button1.textContent="+";
+                  var Input = document.createElement("input");
+                  Input.setAttribute("type","text");
+                  Input.setAttribute("class","qty form-control");
+                  Input.setAttribute("value","1");
+                  var Button2 = document.createElement("button");
+                  Button2.setAttribute("class","cart-qty-minus");
+                  Button2.setAttribute("value","-");
+                  Button2.setAttribute("type","button");
+                  Button2.textContent="-";
+                  InerDiv.append(Button1,Input,Button2);
+                   Div5.append(InerDiv);
+                   
+                   var Div6=document.createElement("div");
+                   Div6.setAttribute("class","cart-item-product-total");
+                   Div6.textContent=a.price;
+
+                   var Div7 =document.createElement("div");
+                   Div7.setAttribute("class","cart-item-product-wishlist");
+                   var DivButton = document.createElement("button");
+                   DivButton.textContent="Delete";
+                   DivButton.addEventListener("click",function(){
+              deletetask(index)
+          });
+                   Div7.append(DivButton);
+                  
+                   DIV.append(checkDiv,Div2,Div3,Div4,Div5,Div6,Div7);
+                   document.querySelector(".cart_box").append(DIV);
+                              
+
+             });
+               var Count= document.querySelector(".itemcount");
+                 Count.textContent=cartarr.length;
+
+                 var SButton =document.querySelector("#Nub");
+                 SButton.textContent=`You choose ${cartarr.length} item(s)`;
+                  
+                 var X= cartarr.reduce(function(acc,cv){
+                             return acc + +cv.price;
+                    },0);
+                 var total = document.querySelector("#TOTAL");
+                 total.textContent=`Total : $ ${X}`;
+                 var subtotal =document.querySelector("#subTOTAL");
+                   subtotal.textContent=`Your Subtotal: ${X}`;
+                    
+         }
+
+         function deletetask(index){
+         console.log(index);
+
+         cartarr.splice(index,1)
+         console.log(cartarr)
+         localStorage.setItem("cartitems",JSON.stringify(cartarr))
+         displaycartitem(cartarr);
+     }
+</script>
+</html>
+

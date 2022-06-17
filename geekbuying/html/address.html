@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlaceOrder</title>
+    <style>
+      #top_logo {
+        width: 100%;
+        border-bottom: 1px solid black;
+       
+      }
+      .logo {
+        width: 15%;
+        height: 10%;
+        padding-left: 42%;
+      }
+      .payprocess {
+        padding-right: 8%;
+      }
+      #bottom {
+        width: 85%;
+        margin: auto;
+        padding-bottom: 2%;
+      }
+      .shippingadd {
+        margin-top: 3%;
+      }
+      .instruction {
+        background-color: rgb(248, 226, 230);
+      }
+      .instruction > p {
+        color: rgb(156, 76, 89);
+        padding-left: 1%;
+      }
+      .add_details {
+        width: 95%;
+        margin-top: 10px;
+        padding: 30px;
+        border: 1px solid grey;
+      }
+      .name {
+        font-size: 15px;
+      }
+      input {
+        border-color: rgb(197, 190, 190);
+      }
+      .input {
+        width: 330px;
+        height: 20px;
+        margin: 1%;
+        border: 1px solid grey;
+        padding: 1%;
+      }
+      select {
+        width: 350px;
+        height: 40px;
+        margin: 1%;
+        border: 1px solid grey;
+        padding: 1%;
+      }
+      .note {
+        font-size: 15px;
+        color: grey;
+      }
+
+      .save {
+        padding: 13px;
+        width: 150px;
+        background-color: blue;
+        font-size: large;
+        margin-right: 2%;
+        color: white;
+      }
+      .cancel {
+        padding: 13px;
+        width: 150px;
+        background-color: white;
+        font-size: large;
+      }
+      #save_cancel {
+        margin-left: 115px;
+        margin-top: 1%;
+      }
+      #Last_section {
+        width: 81%;
+        height: 40%;
+        border: 1px solid grey;
+        margin: auto;
+        display: flex;
+        padding: 2%;
+        justify-content: space-between;
+      }
+      .coupon_box {
+        width: 60%;
+      }
+      .payment_box {
+        width: 30%;
+        padding: 2%;
+      }
+      .place_order {
+        padding: 2%;
+        width: 70%;
+        height: 40px;
+        color: white;
+        font-size: large;
+        margin: auto;
+        background-color:blue;
+      }
+      .apply {
+        background-color: blue;
+        padding: 5px;
+        width: 70px;
+        margin-left: 0;
+        border-radius: 3px;
+        color: white;
+      }
+      .entercode {
+        width: 70%;
+        padding: 5px;
+        border-radius: 3px;
+        margin-right: 0;
+        border: 1px solid grey;
+      }
+      .unique {
+        display: flex;
+      }
+      #ship_deliver {
+        padding-left: 8%;
+        margin-bottom: 0;
+      }
+      #checkline {
+        margin-left: 115px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top_logo">
+      <img
+        class="logo"
+        onclick="window.location.href='../index.html'"
+        src="https://www.shareasale.com/images/logo2016_1.jpg"
+        alt=""
+      />
+    </div>
+    <div id="bottom">
+      <div class="shippingadd"><h3>Shipping Address</h3></div>
+      <div class="instruction">
+        <p>
+          To ensure delivery and prevent delays, please enter the valid
+          alphabetic character.
+        </p>
+      </div>
+      <div class="add_details">
+        <table>
+          <tr>
+            <td class="name">First Name:</td>
+            <td><input class="input" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td class="name">Last Name:</td>
+            <td><input class="input" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td class="name">Country/Region:</td>
+            <td>
+              <select>
+                <option>India</option>
+                <option>Spain</option>
+                <option>Italy</option>
+                <option>France</option>
+                <option>Germany</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="name">City:</td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                placeholder="Your city"
+                value=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="name">Zip/Postal code:</td>
+            <td>
+              <input
+                class="input"
+                type="number"
+                placeholder="Your ZIP/Postal"
+                value=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="name">Address line1:</td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                placeholder="Street address, company name, P.O. box, c/o etc."
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="name">Address line2:</td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                placeholder="Apartment, suite, unit, building, floor etc."
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="name">Phone Number:</td>
+            <td>
+              <div class="unique">
+                <input
+                  class="input"
+                  type="Number"
+                  placeholder="Your phone number"
+                /><span class="note"
+                  ><p>
+                    Note: Required by courier/postman to ensure delivery and
+                    prevent delays.Please enter your correct number.
+                  </p></span
+                >
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="checkline">
+          <input type="checkbox" />
+          <span>Use as default address</span>
+        </div>
+        <div id="save_cancel">
+          <button class="save">Save</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="ship_deliver">
+      <h3>Shipping & Delivery</h3>
+    </div>
+
+    <div id="Last_section">
+      <div class="coupon_box">
+        <p>Coupon:</p>
+        <form id="formsubmit">
+          <input
+            id="coupan"
+            class="entercode"
+            type="text"
+            placeholder="Please enter your code here"
+          />
+          <span><input type="submit" class="apply" value="Apply" /></span>
+        </form>
+      </div>
+      <div class="payment_box">
+        <div>
+          <p id="total"></p>
+          <p>Shipping Cost: 0:00</p>
+          <p id="dis">Coupan Amount: -0:00</p>
+          <p id="final" style="font-weight: bold; color: brown"></p>
+          <button
+            onclick="window.location.href='../html/payment.html'"
+            class="place_order"
+          >
+            Place Your Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var cartarr = JSON.parse(localStorage.getItem("cartitems"));
+    var X = cartarr.reduce(function (acc, cv) {
+      return acc + +cv.price;
+    }, 0);
+    var total = document.querySelector("#total");
+    total.textContent = `Order Subtotal: ${X}`;
+
+    var final = document.querySelector("#final");
+    final.textContent = `Grand Total: ${X}`;
+
+    document.querySelector("#formsubmit").addEventListener("submit", coupanfun);
+    function coupanfun(event) {
+      event.preventDefault();
+
+      var cartarr = JSON.parse(localStorage.getItem("cartitems"));
+      var X = cartarr.reduce(function (acc, cv) {
+        return acc + +cv.price;
+      }, 0);
+      console.log(X);
+      var Cvalue = document.querySelector("#coupan").value;
+      if (Cvalue == "geekbuying") {
+        var AfterDiscount = (X * 70) / 100;
+        var Dvalue = (X * 30) / 100;
+        alert("Coupon Applied");
+      } else {
+        alert("Invalid coupon");
+      }
+
+      var Discount = document.querySelector("#dis");
+      Discount.textContent = `Coupon Amount: -${Dvalue}`;
+
+      var final = document.querySelector("#final");
+      final.textContent = `Grand Total: ${Math.floor(AfterDiscount)}`;
+    }
+  </script>
+</html>

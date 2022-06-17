@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            background-image:url(https://img.gkbcdn.com/s3/bn/2203/signin-6239450f2b40c91b9c8a4526.jpg);
+            background-repeat: no-repeat;
+        }
+
+        #container1 {
+            width: 100%;
+            height: 10%;
+    
+        }
+        img {
+            margin: auto;
+        }
+        #container2 {
+            width : 100%;
+            height: 60%;
+            margin: auto;
+        }
+        input {
+            width: 320px;
+            height: 40px;
+            margin: 10px auto;
+            padding-left: 20px;
+        }
+        .top {
+            width: 410px;
+            height: 450px;
+            margin: 100px auto;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+        }
+        .top > .top_son1 {
+            margin: 40px 10px auto;
+            display: inline-block;
+            padding-left: 22px;
+            padding-bottom: 10px;
+        }
+        .top > .top_son2 {
+            margin: 0 30px auto;
+            margin-bottom: 0px;
+        }
+        .signin {
+            background-color: white;
+            border: 0;
+            padding-left: 130px;
+        }
+        b {
+            font-size: larger;
+        }
+        .code {
+            width: 170px;
+        }
+        .take_code {
+            width: 135px;
+            height: 45px;
+            margin: 10px;
+            margin-left: 15px;
+        }
+        .section1 {
+            display: flex;
+            flex-direction: row;
+        }
+        .createacc {
+            background-color:blue;
+            color: white;
+            border: 0px;
+            margin: 10px auto;
+            width: 342px;
+            height: 40px;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .section2 {
+            font-size: 15px;
+            color: rgb(116, 114, 114);
+        }
+        a {
+            color: black;
+        }
+        .check {
+            width: 12px;
+            height: 12px;
+            border-radius: 1px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="signup_page">
+
+        <div id="container1"></div>
+        <div id="container2">
+            <div class="top">
+                <div class="top_son1">
+                    <b>Create your account</b> 
+                    <button class="signin" onclick=" window.location.href='login.html'">Sign In</button>
+                </div>
+                <div class="top_son2">
+                     <form id="form">
+                    <input id="nickname" type="text" placeholder="Nick name" />
+                    <input id="email" type="text" placeholder="Email address" />
+                    <input id="pass" type="password" placeholder="Password" />
+                    <div class="section1">
+                        <input class="code" type="password" placeholder="Access code" value=""/>
+                        <img class="take_code" src="https://www.geekbuying.com/QA/QACode" />
+                    </div>
+                    <div class="section2"> 
+                        <input class="check" type="checkbox" />
+                        <span>I agree to Geekbuying's</span>
+                        <a href="">Terms of Use</a>
+                        <span>&</span>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                    <input type="submit" class="createacc" value="Create account">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+ <script>
+           var signuparr =JSON.parse(localStorage.getItem("signupdata"))||[];
+
+          document.querySelector("#form").addEventListener("submit",submitform);
+            function submitform(event){
+               event.preventDefault();
+               var nick = document.querySelector("#nickname").value;
+                var Email = document.querySelector("#email").value;
+                var password = document.querySelector("#pass").value;
+                var obj = {
+                    Nick_name: nick,
+                    Email_id: Email,
+                    pass_word: password
+                };
+                 
+                  signuparr.push(obj);
+                  localStorage.setItem("signupdata",JSON.stringify( signuparr));
+                 alert("signup successfull"); 
+                 window.location.href="login.html";
+                
+            }
+            
+ </script>
+</html>

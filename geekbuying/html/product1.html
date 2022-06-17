@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bike</title>
+    <script src="https://kit.fontawesome.com/72215895a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../stylesheet/product1.css"><title></title>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="head1"> 
+        <div style="color:white">Save big with app!</div>
+        <div  style="color:white">Language</div>
+        <div  style="color:white">Support Center</div>
+    </div>
+        
+    <div id="head2">
+            <div id="head2one">   <div id="head2oneone"><img onclick="window.location.href='index.html'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfDfjf2o3uKXbhMlt8yKXh8shusZGWFAPMw&usqp=CAU" alt=""></div>
+            <div id="head2onetwo"> 
+                <select id="sec">
+                    <option value="">All Categories </option>
+                    <option value="">Smart Home & Garden</option>
+                    <option value="">Phones & Accessories</option>
+                    <option value="">Computers, Tablets & Accessories</option>
+                    <option value="">Wearable Devices</option>
+                    <option value="">Automobiles & Motorcycles</option>
+                    <option value="">sports & Outdoors</option>
+                    <option value="">Consumer Electronics</option>
+                    <option value="">TV Boxes & Mini PCs</option>
+                    <option value="">Toys & Hobbies</option>
+                    <option value="">Security System</option>
+                    <option value="">Fashion</option>
+                </select>
+                
+                <input style="height: 31px;width: 300px;" placeholder="Search by keywords" >
+                <div style="width: 45px;height: 16px;padding: 8px;"><i class="fas fa-search"></i></div>
+            </div>
+            <div id="head2onethree">
+                <div id="sign_in"><i class="far fa-user" style="color: white;margin-left: -10px;"></i>Sign in</div>
+                <div id="wislist"><i class="far fa-heart" style="color: white;height: 200px; margin-left: -10px;"></i>Wislist</div>
+                <div id="cart"><i class="fas fa-cart-plus" style="color: white; margin-left: -10px;"></i></div> </div>
+            </div>
+            <div id="head2two"> 
+            <div id="head2twoone"> 
+            <div ><a href="../html/product1.html" style="color:white">Caregories</a></div></div>
+            <div ><a href="../html/product2.html" style="color:white">New</a></div>
+            <div><a href="#" style="color: white">Bestselling</a></div>
+            <div><a href="#" style="color: white">Brand</a></div> 
+            <div><a href="#" style="color: white">Clearence</a></div>
+            <div><a href="#" style="color: white">Coupon</a></div>
+            <div><a href="#" style="color: white">App Only</a></div>
+            
+        </div>
+    </div>
+
+    
+
+<!-- ################## body ####################### -->
+
+    <div id="container">
+        <div class="top">
+          <center><h2>Good choice for city commuting</h2></center>  
+        </div>
+        <div class="bottom">
+            <div class="card1">
+                <h4>Sports & Outdoors</h4>
+                <p>E-Bikes, Scooters & Wheels</p>
+                
+            </div>
+            <div class="card2">
+               
+                <div class="box2">
+                  
+                    <div class="filter">
+                        <div><p style="margin-top: 5px; font-size: 20px;">Filter :</p></div>
+                        <div>
+                            <select  id="brandshort" onchange="brandfilter()" style="width: 100%; height: 100%;">
+                            <option value="">Filter by Brand</option>
+                            <option value="ELEGLIDE">ELEGLIDE</option>
+                            <option value="FIIDO">FIIDO</option>
+                            <option value="ENGWE">ENGWE</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="NIUBILITY">NIUBILITY</option>
+                            <option value="ESKUTE">ESKUTE</option>
+                          </select>
+                        </div>
+                        <input type="checkbox" id="onSale"  value="onSale">
+                        <label>On Sale</label>
+                        <input type="checkbox" id="onSale"  value="onSale">
+                        <label>Free Shipping Only</label>
+                    </div>
+                    <div class="sortby">
+                        <div><p style="margin-top: 5px; font-size: 20px;">Sort</p></div>
+                        <div>
+                            <select  id="pricesort" onchange="pricesort()"   style="width: 100%; height: 100%;">
+                            <option value="">Sort by Price</option>
+                            <option value="high">High to Low</option>
+                            <option value="low">Low to High</option>
+                          </select>
+                        </div>
+                        <div>
+                            <select  id="namesort" onchange="namesort()"   style="width: 100%; height: 100%;">
+                            <option value="">Sort by Name</option>
+                            <option value="asc">Ascending</option>
+                            <option value="dsc">Desending</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="box3"> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- #################### footer ################### -->
+
+      <div class="footer">
+        
+        </div>
+
+    
+</body>
+<script src="../js/product1.js"></script>
